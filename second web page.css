@@ -1,0 +1,224 @@
+
+/*最外层样式开始*/
+.swp{
+    width: 80%;
+    margin: auto;
+    /*max-width: 1920px;
+    min-width: 1280px;
+    overflow: hidden; 自动找高*/
+}
+/*最外层样式结束*/
+
+/*头部样式开始*/
+                /*标题小字样式开始*/
+.xiaoziti{
+    color: black;
+    font-family: monospace;
+    font-size: 13px;
+    height: 54px;
+}
+                /*标题小字样式结束*/
+.header{
+    position: relative;
+    width: 100%;
+    height: 105px;
+    line-height: 105px;
+    /*background-color: white;*/
+}
+                /*大字样式开始*/
+p.daziti{
+    position: absolute;
+    top: -70px;
+    left: 10%;
+    color: black;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 70px;
+    font-weight: bold;
+    height: 104px;
+    width: 400px;
+}
+                /*大字样式结束*/
+.huigu{
+    position: absolute;
+    top: 0px;
+    right: 25%;
+    color: rgb(41, 41, 41);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 13px;
+    border-left: 1px solid #dadada;
+    height: 104px;
+    width: 200px;
+    cursor: pointer;  /*光标模式修改*/
+} 
+.huigu:hover{
+    color: darkgray;
+    border-bottom: 1px solid darkgrey; /*光标悬停*/
+}
+.date01{
+    position: absolute;
+    top: 0;
+    right: 19%;
+    color: black;
+    font-family: monospace;
+    font-size: 50px;
+    height: 104px;
+    font-weight: bold;   
+    width: 70px; 
+}               
+/*头部样式结束*/
+
+/*导航样式开始（大图片部分）*/
+.banner{
+    text-align: center;
+    width: 100%;
+    height: 510px;
+    background-color: blue;
+}
+.nav{    /*顶部一条小导航*/
+    position: relative;
+    width: 100%;
+    left: 0;
+    height: 30px;
+    line-height: 20px;
+    /* background-color: blueviolet; */
+}
+.nav li{  /*小引导行字体大小*/
+    float: left;
+    width: 7%;
+    font-size: 14px;
+    transition: 0.5s;
+}
+.nav li:hover{   /*小引导行光标悬停*/
+    color: darkgray;
+    transform: scale(1.05);
+}
+.nav a{  /*小引导行字体颜色*/
+    color: black;
+}
+.nav a:hover{
+    color: darkgray;
+}
+.submenu{  /*小下拉列表*/ 
+    position: absolute;
+    top: 30px;
+    display: none;
+    width: 15%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: white;
+    border: 1px solid black;
+    /*padding: 10px;*/
+    
+}
+.submenu:hover{
+    display: block;
+    /*不知道为什么隐藏之后就悬停显示不出来！！！！！*/
+}
+
+/*导览缩略开始*/
+.ham{
+    width: 10%;
+    height: 30%;
+    background-color: #000;
+}
+#ham:checked + label.nav-hamburger{
+background-color: cyan;
+}
+#ham{
+    display: none;
+}
+.hamburger-container{
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 16px;
+}
+.hamburger-container span{
+    display: block;
+    height: 1px;
+    background-color: #fff;
+    position: relative;
+    transition: all .3s ease-in-out;
+    top: 0;
+}
+.hamburger-container span:nth-child(2){
+    margin-top: 7px;
+}
+#ham:checked + label .hamburger-container span:nth-child(1){
+    transform: rotate(-45deg);
+    top: -4px;
+    transition: top .3s ease-in-out , transform .3s ease-in-out .3s;
+}
+.ham-nav{
+    background-color: rgba(0, 0, 0, .82);
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 44px;
+    left: 0;
+    transform: scaleY(0);
+    transition: transform .3s ease-in-out .3s , opacity .3s ease-in-out .3s;
+    transform-origin: 50% 0;
+    opacity: 0;
+}
+#ham:checked ~ .ham-nav{
+    transform: scaleY(1);
+    opacity: 1;
+}
+.ham-nav ul{
+    margin-top: 1px;
+}
+.ham-nav ul li{
+    color: #fff;
+}
+/*导览缩略结束*/
+
+.search{
+    position: absolute;
+    top: -5px;
+    right: 0;
+    width: 10%;
+    height: 10%;
+    /* background-color: white; */
+    transition: 0.5s;
+}
+.search :hover{
+    transform: scale(1.05);
+}
+.toggle{
+    position: absolute;
+    top: -5px;
+    right: 4%;
+    width: 10%;
+    height: 10%;
+    /* background-color: palevioletred; */
+    cursor: pointer;
+    transition: 0.5s;
+}
+.toggle :hover{
+    transform: scale(1.05);
+}
+section.dark{
+    background-color: #171717;
+}
+
+.banner-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+/*导航样式结束*/
+
+/*主体开始*/
+.width-reduced{
+    margin: auto;
+    width: 87.5%;
+    height: auto;
+    background-color: aqua;
+}
+
+/*主体结束*/
